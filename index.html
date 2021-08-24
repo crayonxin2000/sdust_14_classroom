@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<header>
+    <meta charset="utf-8"/>
+    <meta title="课程表"/>
+    <link rel="stylesheet" href="table.css">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+</header>
+<body>
+    <h1 style="text-align: center;">J14号教学楼 教师课表查询</h1>
+    <div id="idv_btn" >
+        <button id="down_search">减2搜索</button>
+        <input type="text" id="input_num"/>
+        <button id="up_search">加2搜索</button><input type="button" id="search" value="搜索">
+    </div>
+    
+    <table id="table">
+        <tr id="_">
+             <td class="column">星期一</td>
+             <td class="column">星期二</td>
+             <td class="column">星期三</td>
+             <td class="column">星期四</td>
+             <td class="column">星期五</td>
+             <td class="column">星期六</td>
+             <td class="column">星期日</td>
+        </tr>
+        <tr id="_0"></tr>
+        <tr id="_1"></tr>
+        <tr id="_2"></tr>
+        <tr id="_3"></tr>
+        <tr id="_4"></tr>
+    </table>
+   
+    
+   <div id="img_dist">
+       <img src="img_14_dist.png" alt="山东科技大学14号楼分布图" >
+   </div>
+</body>
+<script>
+    var json_obj;
+    createTable();
+    //读取json文件
+    //保存一个json文件访问的URL作为一个变量
+    requestURL = 'info.json';
+    //创建一个HTTP请求对象
+    request = new XMLHttpRequest();
+    //使用open（）打开一个新请求
+    request.open('GET', requestURL);
+    //设置XHR访问JSON格式数据，然后发送请求
+    // request.responseType = 'json';
+    //设置XHR访问text格式数据
+    request.responseType = 'text';
+    request.send();
+    //处理来自服务器的数据
+    request.onload = function() {
+        js = request.response;
+        json_obj = JSON.parse(js);
+        // let superHeroes = request.response;
+        refreshTable("328");
+        $("#input_num").val("328")
+    }
+    $("#search").click(function(e){
+        refreshTable($("#input_num").val());
+    })
+    $("#up_search").click(function(e){
+        $("#input_num").val(parseInt($("#input_num").val())+2);
+        $("#search").click();
+    })
+    $("#down_search").click(function(e){
+        $("#input_num").val(parseInt($("#input_num").val())-2);
+        $("#search").click();
+    })
+    function refreshTable(number){
+        if( number.toString() in json_obj){
+            for(i=0;i<7;i++){
+                for(t=0;t<5;t++){
+                    $("#"+i+"_"+t).text(json_obj[number][i+"_"+t]);
+                }
+            }
+        }else{
+            for(i=0;i<7;i++){
+                for(t=0;t<5;t++){
+                    $("#"+i+"_"+t).text("无数据");
+                }
+            }
+        }
+    }
+    function createTable(){
+        for(i=0;i<5;i++){
+            if(i<2){
+                item_class='class="item_m item"'
+            }else if(i<4){
+                item_class='class="item_a item"'
+            }else{
+                item_class='class="item_e item"'
+            }
+            
+            $("#table").append('<tr id="_'+i+'" class="item_tr" ></tr>')
+            for(t=0;t<7;t++){
+                $("#_"+i).append('<td id="'+t+'_'+i+'" '+item_class+' >出错</td>')               
+            }
+        }
+    }
+</script>

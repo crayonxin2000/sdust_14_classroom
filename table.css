@@ -1,0 +1,25 @@
+.column{
+    width: 100px;
+    background-color: rgb(255, 186, 121);
+}
+.item{
+    height: 200px;
+   
+}
+.item_m{
+    background-color: yellow;
+}
+.item_a{
+    background-color: yellow;
+}
+.item_e{
+    background-color: yellow;
+}
+table{
+    margin:0 auto;
+}
+#idv_btn{
+    margin:0 auto;
+    width: fit-content;
+    margin-bottom:15px;
+}
