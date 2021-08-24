@@ -1,19 +1,19 @@
 .column{
     width: 100px;
-    background-color: rgb(255, 186, 121);
+    background-color: rgb(88, 188, 255);
 }
 .item{
     height: 200px;
    
 }
 .item_m{
-    background-color: yellow;
+    background-color: rgb(103, 243, 98);
 }
 .item_a{
-    background-color: yellow;
+    background-color: rgb(245, 207, 84);
 }
 .item_e{
-    background-color: yellow;
+    background-color: rgb(217, 136, 255);
 }
 table{
     margin:0 auto;

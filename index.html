@@ -11,6 +11,7 @@
 </head>
 <body>
     <h1 style="text-align: center;">J14号教学楼 教师课表查询</h1>
+    <h3 style="text-align: center;">目前仅展示1-3周的教室安排</h3>
     <div id="idv_btn" >
         <button id="down_search">减2搜索</button>
         <input type="text" id="input_num"/>
@@ -59,8 +60,8 @@
         js = request.response;
         json_obj = JSON.parse(js);
         // let superHeroes = request.response;
-        refreshTable("328");
-        $("#input_num").val("328")
+        refreshTable("302");
+        $("#input_num").val("302")
     }
     $("#search").click(function(e){
         refreshTable($("#input_num").val());
