@@ -18,8 +18,11 @@
 table{
     margin:0 auto;
 }
-#idv_btn{
+#div_btn{
     margin:0 auto;
     width: fit-content;
-    margin-bottom:15px;
+    margin-bottom:10px;
+}
+h1{
+    margin:30px;
 }
