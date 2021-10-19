@@ -30,7 +30,7 @@
         <div id="div_classroom">
             <button id="down_search" class="btn btn-primary">减2搜索</button>
             <button id="down_search_1" class="btn btn-primary">减1搜索</button>
-            <input type="text" id="input_num" value="304" />
+            <input type="text" id="input_num" value="306" />
             <button id="up_search_1" class="btn btn-primary">加1搜索</button>
             <button id="up_search" class="btn btn-primary">加2搜索</button>
         </div>
@@ -38,7 +38,7 @@
         <br>
         <div id="div_week">
             <button id="down_week" name="week" class="btn btn-primary">上一周</button>
-            <input type="text" id="input_week_num" value="4" />
+            <input type="text" id="input_week_num" value="8" />
             <button id="up_week" name="week" class="btn btn-primary">下一周</button>
         </div>
         
@@ -59,11 +59,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr id="_0"></tr>
+            <!-- 课程表五行用代码创建 -->
+            <!-- <tr id="_0"></tr>
             <tr id="_1"></tr>
             <tr id="_2"></tr>
             <tr id="_3"></tr>
-            <tr id="_4"></tr>
+            <tr id="_4"></tr> -->
         </tbody>
         
     </table>
@@ -177,7 +178,7 @@
 
             $("#table").append('<tr id="_' + i + '" class="item_tr" ></tr>')
             for (t = 0; t < 7; t++) {
-                $("#_" + i).append('<td id="' + t + '_' + i + '" ' + item_class + ' >加载中。。。</td>')
+                $("#_" + i).append('<td ><div id="' + t + '_' + i + '" ' + item_class + ' >加载中。。。</div></td>')
             }
         }
     }

@@ -1,23 +1,46 @@
+/*jxzk字体*/
+@font-face {
+	font-family:alibaba; 
+	src: url('fonts/Alibaba-PuHuiTi-Medium.ttf'); /* 江西拙楷 字体*/
+}
+body{
+    font-family: alibaba;
+}
 .column{
     width: 100px;
-    background-color: rgb(88, 188, 255);
+    background-color: rgb(97, 180, 235);
+    text-align: center;
+    color: rgb(14, 73, 112);
 }
 .item{
     height: 200px;
-   
+   margin: 6px;
+   padding:8px;
+   border-radius: 6px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  
 }
 .item_m{
     background-color: rgb(103, 243, 98);
+    color: rgb(8, 70, 6);
 }
 .item_a{
     background-color: rgb(245, 207, 84);
+    color: rgb(94, 73, 7);
 }
 .item_e{
     background-color: rgb(217, 136, 255);
+    color:rgb(98, 30, 129) ;
 }
 table{
     margin:0 auto;
+
+    
 }
+td{
+    border-bottom:1px solid rgb(187, 187, 187)
+} 
 #div_btn{
     margin:0 auto;
     width: fit-content;
