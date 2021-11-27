@@ -14,7 +14,7 @@ def getCookieDict(cook):
     return cookies
 
 url="http://jwgl.sdust.edu.cn/jsxsd/kbcx/kbxx_classroom_ifr"
-cookie_text="UM_distinctid=178dabf846387e-0335b78fc680db-3f356b-144000-178dabf8464b70; JSESSIONID=70B9FB07EFB9710158B83A14CFAF1590"
+cookie_text="JSESSIONID=ADE58AEA0F0353A95F3B708DF5E195A0"
 
 
 def html_to_excel(d,index):
