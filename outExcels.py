@@ -1,7 +1,7 @@
 '''
 Author: crayonxin
 Date: 2021-08-28 20:42:18
-LastEditTime: 2022-02-28 15:40:59
+LastEditTime: 2022-04-13 09:03:19
 LastEditors: crayonxin
 Description: 
 FilePath: \sdust_14_classroom\outExcels.py
@@ -23,7 +23,7 @@ def getCookieDict(cook):
     return cookies
 
 url="http://jwgl.sdust.edu.cn/jsxsd/kbcx/kbxx_classroom_ifr"
-cookie_text="yikikata=1b3f1381-54df957b501e945f2a8b6eae619cb0b6; brmidyrvj=both; UM_distinctid=17e347770289ca-0fa89abc4d763d-4303066-144000-17e34777029abe; JSESSIONID=705D616322A32CB30FFAEA7804B03D21; yikikata=1b3f13d0-319c6a6c301f343c01eb03551046e48b; brmidyrvj=both"
+cookie_text=""
 
 
 def html_to_excel(d,index):
